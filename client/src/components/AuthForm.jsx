@@ -1,6 +1,7 @@
 import { useState } from "react";
+import SignUp from "./SignUp";
 
-const AuthForm = ({ setToken }) => {
+const AuthForm = ({ setToken, setSignUp, signUp }) => {
   const [alert, setAlert] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -49,6 +50,7 @@ const AuthForm = ({ setToken }) => {
         </label>
         <button type="submit">Submit</button>
       </form>
+      <p>Don't have an account? <button onClick={() => setSignUp(!signUp)}>Sign Up</button></p>
     </>
   );
 };
